@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        :root {
+            --accent-color: #FF4D4D;
+            --font-size: 1.1rem;
+        }
+    </style>
+
+    
+    
+    
+    
+    
+    
+
+    
+    <title>Attention Is All You Need Walkthrough</title>
+    <meta name="description" content="Step by step breakdown and PyTorch implementation">
+    <meta name="keywords" content='posts'>
+
+    <meta property="og:url" content="//localhost:1313/posts/my-first-post/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Attention Is All You Need Walkthrough">
+    <meta property="og:description" content="Step by step breakdown and PyTorch implementation">
+    <meta property="og:image" content="//localhost:1313/images/avatar.jpg">
+    <meta property="og:image:secure_url" content="//localhost:1313/images/avatar.jpg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Attention Is All You Need Walkthrough">
+    <meta name="twitter:description" content="Step by step breakdown and PyTorch implementation">
+    <meta property="twitter:domain" content="//localhost:1313/posts/my-first-post/">
+    <meta property="twitter:url" content="//localhost:1313/posts/my-first-post/">
+    <meta name="twitter:image" content="//localhost:1313/images/avatar.jpg">
+
+    
+    <link rel="canonical" href="//localhost:1313/posts/my-first-post/">
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print">
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/main.min.css">
+
+    
+    <link id="dark-theme" rel="stylesheet" href="/css/dark.min.css">
+
+    
+    <script src="/js/bundle.min.70293498aa96b2dbb767ec11a622eb2266d8fc37a0fff88233a82952e3c72b15.js" integrity="sha256-cCk0mKqWstu3Z&#43;wRpiLrImbY/Deg//iCM6gpUuPHKxU="></script>
+
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  renderMathInElement(document.body, {
+    delimiters: [
+      {left: "$$", right: "$$", display: true},
+      {left: "$", right: "$", display: false}
+    ]
+  });
+});
+</script>
+
+    
+</head>
+<body>
+        <script>
+            
+            setThemeByUserPref();
+        </script><header class="header">
+    <nav class="header-nav">
+
+
+        <div class="nav-title">
+            <a class="nav-brand" href="//localhost:1313/">Aaron George</a>
+        </div>
+
+        <div class="nav-links">
+            
+            <div class="nav-link">
+                <a href="//localhost:1313/tags/posts" aria-label="" > Posts </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="//localhost:1313/tags/projects/" aria-label="" > Projects </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="//localhost:1313/about" aria-label="" > About </a>
+            </div>
+            
+
+            <span class="nav-icons-divider"></span>
+            <div class="nav-link dark-theme-toggle">
+                <span class="sr-only dark-theme-toggle-screen-reader-target">theme</span>
+                <a aria-hidden="true" role="switch">
+                    <span class="theme-toggle-icon" data-feather="moon"></span>
+                </a>
+            </div>
+
+            <div class="nav-link" id="hamburger-menu-toggle">
+                <span class="sr-only hamburger-menu-toggle-screen-reader-target">menu</span>
+                <a aria-checked="false" aria-labelledby="hamburger-menu-toggle" id="hamburger-menu-toggle-target" role="switch">
+                    <span data-feather="menu"></span>
+                </a>
+            </div>
+
+            
+            <ul class="nav-hamburger-list visibility-hidden">
+                
+                <li class="nav-item">
+                    <a href="//localhost:1313/tags/posts" > Posts </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="//localhost:1313/tags/projects/" > Projects </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="//localhost:1313/about" > About </a>
+                </li>
+                
+                <li class="nav-item dark-theme-toggle">
+                    <span class="sr-only dark-theme-toggle-screen-reader-target">theme</span>
+                    <a role="switch">
+                        <span class="theme-toggle-icon" data-feather="moon"></span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+<main id="content">
+    <div class="post container">
+    <div class="post-header-section">
+        <h1>Attention Is All You Need Walkthrough</h1>
+
+        
+
+        
+	
+	
+	
+	
+        
+
+	
+
+	
+
+	
+          <small role="doc-subtitle">Step by step breakdown and PyTorch implementation</small>
+	
+
+	
+          <p class="post-date">
+              
+
+              February 13, 2026
+
+              
+          </p>
+	
+
+        <ul class="post-tags">
+          
+           
+             <li class="post-tag"><a href="//localhost:1313/tags/posts">posts</a></li>
+           
+         
+        </ul>
+    </div>
+
+    <div class="post-content">
+        <h2 id="introduction">Introduction</h2>
+<p>The Transformer architecture introduced in <em>Attention Is All You Need</em> fundamentally changed deep learning for sequence modeling. Instead of recurrence (RNNs) or convolution (CNNs), it relies entirely on <strong>self-attention mechanisms</strong>.</p>
+<p>This walkthrough breaks down:</p>
+<ul>
+<li>Why self-attention works</li>
+<li>The mathematics behind scaled dot-product attention</li>
+<li>Multi-head attention</li>
+<li>Positional encoding</li>
+<li>Encoder block structure</li>
+<li>A minimal PyTorch implementation</li>
+</ul>
+<hr>
+<h2 id="1-the-core-idea-self-attention">1. The Core Idea: Self-Attention</h2>
+<p>Traditional RNNs process tokens sequentially:</p>
+<ul>
+<li>Limited parallelization</li>
+<li>Difficulty capturing long-range dependencies</li>
+<li>Vanishing/exploding gradients</li>
+</ul>
+<p>Self-attention computes relationships between all tokens simultaneously:</p>
+<p>$$
+Attention(Q, K, V) =
+softmax\left(\frac{QK^T}{\sqrt{d_k}}\right)V
+$$</p>
+<p>Where:</p>
+<ul>
+<li>$Q$ = Query</li>
+<li>$K$ = Key</li>
+<li>$V$ = Value</li>
+<li>$d_k$ = dimension of key vectors</li>
+</ul>
+<p>This enables:</p>
+<ul>
+<li>Full parallelization</li>
+<li>Global receptive field</li>
+<li>Stable gradient flow</li>
+</ul>
+<hr>
+<h2 id="2-scaled-dot-product-attention-pytorch">2. Scaled Dot-Product Attention (PyTorch)</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> torch
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> torch.nn <span style="color:#66d9ef">as</span> nn
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> torch.nn.functional <span style="color:#66d9ef">as</span> F
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ScaledDotProductAttention</span>(nn<span style="color:#f92672">.</span>Module):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">__init__</span>(self, d_k):
+</span></span><span style="display:flex;"><span>        super()<span style="color:#f92672">.</span><span style="color:#a6e22e">__init__</span>()
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>scale <span style="color:#f92672">=</span> d_k <span style="color:#f92672">**</span> <span style="color:#ae81ff">0.5</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">forward</span>(self, Q, K, V, mask<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>):
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        Q, K, V: (batch, heads, seq_len, d_k)
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        mask: optional attention mask
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        scores <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>matmul(Q, K<span style="color:#f92672">.</span>transpose(<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)) <span style="color:#f92672">/</span> self<span style="color:#f92672">.</span>scale
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> mask <span style="color:#f92672">is</span> <span style="color:#f92672">not</span> <span style="color:#66d9ef">None</span>:
+</span></span><span style="display:flex;"><span>            scores <span style="color:#f92672">=</span> scores<span style="color:#f92672">.</span>masked_fill(mask <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>, float(<span style="color:#e6db74">&#39;-inf&#39;</span>))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        attention <span style="color:#f92672">=</span> F<span style="color:#f92672">.</span>softmax(scores, dim<span style="color:#f92672">=-</span><span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>        output <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>matmul(attention, V)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> output, attention
+</span></span></code></pre></div>
+        
+    </div>
+
+    <div class="prev-next">
+        
+    </div>
+
+    
+    
+    
+</div>
+
+<aside class="post-toc">
+    <nav id="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#1-the-core-idea-self-attention">1. The Core Idea: Self-Attention</a></li>
+    <li><a href="#2-scaled-dot-product-attention-pytorch">2. Scaled Dot-Product Attention (PyTorch)</a></li>
+  </ul>
+</nav>
+    </nav>
+</aside>
+
+
+
+    
+
+        </main><footer></footer></body>
+</html>

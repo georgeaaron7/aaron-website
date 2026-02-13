@@ -1,0 +1,63 @@
+baseURL = ""
+defaultContentLanguage = "en"
+
+# Automatically generate robots.txt
+enableRobotsTXT = true
+languageCode = "en"
+theme = "gokarna"
+title = "Aaron George"
+
+[taxonomies]
+  tag = "tags"
+
+
+[params]
+avatarURL = "/images/avatar.jpg"
+avatarSize = "size-l"
+math = true
+customHeadHTML = '''
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  renderMathInElement(document.body, {
+    delimiters: [
+      {left: "$$", right: "$$", display: true},
+      {left: "$", right: "$", display: false}
+    ]
+  });
+});
+</script>
+'''
+description = "ECE’27 NITW"
+socialIcons = [
+    {name = "github", url = "https://github.com/georgeaaron7"},
+    {name = "linkedin", url = "https://www.linkedin.com/in/georgeaaron7/"},
+    {name = "email", url = "georgeaaron005@gmail.com"},
+]
+accentColor = "#FF4D4D"
+footer = ""
+
+[menu]
+  [[menu.main]]
+    # Display name
+    name = "Posts"
+
+    # Relative URL slug (appended to baseURL)
+    url = "/tags/posts"
+
+    # Lower weights are listed first in the menu (leftmost); higher weights are
+    # listed last in the menu (rightmost)
+    weight = 1
+
+  [[menu.main]]
+    name = "Projects"
+    url = "/tags/projects/"
+    weight = 2
+
+
+  [[menu.main]]
+    name = "About"
+    url = "/about"
+    weight = 3
