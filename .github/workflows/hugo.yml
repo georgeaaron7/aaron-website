@@ -24,7 +24,7 @@ jobs:
           hugo-version: 'latest'
 
       - name: Build
-        run: hugo --minify
+        run: hugo --minify --cleanDestinationDir
 
       - name: Setup Pages
         uses: actions/configure-pages@v5

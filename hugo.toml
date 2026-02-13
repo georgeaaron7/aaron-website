@@ -1,6 +1,9 @@
 baseURL = "https://georgeaaron7.github.io/aaron-website/"
 defaultContentLanguage = "en"
 
+canonifyURLs = true
+relativeURLs = false
+
 # Automatically generate robots.txt
 enableRobotsTXT = true
 languageCode = "en"
