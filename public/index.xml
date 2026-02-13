@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Aaron George</title>
-    <link>//localhost:1313/</link>
+    <link>http://localhost:1313/aaron-website/</link>
     <description>Recent content on Aaron George</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Fri, 13 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/aaron-website/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Attention Is All You Need Walkthrough</title>
-      <link>//localhost:1313/posts/my-first-post/</link>
+      <link>http://localhost:1313/aaron-website/posts/my-first-post/</link>
       <pubDate>Fri, 13 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/my-first-post/</guid>
+      <guid>http://localhost:1313/aaron-website/posts/my-first-post/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;The Transformer architecture introduced in &lt;em&gt;Attention Is All You Need&lt;/em&gt; fundamentally changed deep learning for sequence modeling. Instead of recurrence (RNNs) or convolution (CNNs), it relies entirely on &lt;strong&gt;self-attention mechanisms&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;This walkthrough breaks down:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Why self-attention works&lt;/li&gt;&#xA;&lt;li&gt;The mathematics behind scaled dot-product attention&lt;/li&gt;&#xA;&lt;li&gt;Multi-head attention&lt;/li&gt;&#xA;&lt;li&gt;Positional encoding&lt;/li&gt;&#xA;&lt;li&gt;Encoder block structure&lt;/li&gt;&#xA;&lt;li&gt;A minimal PyTorch implementation&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;1-the-core-idea-self-attention&#34;&gt;1. The Core Idea: Self-Attention&lt;/h2&gt;&#xA;&lt;p&gt;Traditional RNNs process tokens sequentially:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Limited parallelization&lt;/li&gt;&#xA;&lt;li&gt;Difficulty capturing long-range dependencies&lt;/li&gt;&#xA;&lt;li&gt;Vanishing/exploding gradients&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Self-attention computes relationships between all tokens simultaneously:&lt;/p&gt;</description>
     </item>
     <item>
       <title>ML Trading Bot</title>
-      <link>//localhost:1313/posts/trading-bot/</link>
+      <link>http://localhost:1313/aaron-website/posts/trading-bot/</link>
       <pubDate>Fri, 13 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/trading-bot/</guid>
+      <guid>http://localhost:1313/aaron-website/posts/trading-bot/</guid>
       <description></description>
     </item>
     <item>
       <title>About</title>
-      <link>//localhost:1313/about/</link>
+      <link>http://localhost:1313/aaron-website/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/about/</guid>
+      <guid>http://localhost:1313/aaron-website/about/</guid>
       <description>&lt;p&gt;I build and write about machine learning systems.&lt;/p&gt;&#xA;&lt;p&gt;Currently exploring deep learning research and production deployment.&lt;/p&gt;</description>
     </item>
   </channel>
