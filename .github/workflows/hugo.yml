@@ -27,7 +27,9 @@ jobs:
           hugo-version: 'latest'
 
       - name: Build
-        run: hugo --minify --baseURL "https://georgeaaron7.github.io/aaron-website/"
+        run: hugo --minify
+        env:
+          HUGO_ENVIRONMENT: production
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
