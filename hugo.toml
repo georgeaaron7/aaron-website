@@ -1,4 +1,4 @@
-baseURL = "https://georgeaaron7.github.io/aaron-website/"
+baseURL = ""
 defaultContentLanguage = "en"
 
 canonifyURLs = true
