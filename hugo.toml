@@ -37,7 +37,7 @@ description = "ECE’27 NITW"
 socialIcons = [
     {name = "github", url = "https://github.com/georgeaaron7"},
     {name = "linkedin", url = "https://www.linkedin.com/in/georgeaaron7/"},
-    {name = "email", url = "georgeaaron005@gmail.com"},
+    {name = "email", url = "mailto:georgeaaron005@gmail.com"},
 ]
 accentColor = "#FF4D4D"
 footer = ""
