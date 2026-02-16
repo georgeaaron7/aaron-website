@@ -1,7 +1,7 @@
 baseURL = "https://aarongeorge.xyz/"
 defaultContentLanguage = "en"
 
-canonifyURLs = true
+canonifyURLs = false
 relativeURLs = false
 
 # Automatically generate robots.txt
@@ -41,6 +41,9 @@ socialIcons = [
 ]
 accentColor = "#FF4D4D"
 footer = ""
+
+[build]
+  disableFingerprinting = true
 
 [menu]
   [[menu.main]]
