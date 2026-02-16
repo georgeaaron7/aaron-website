@@ -16,6 +16,7 @@ title = "Aaron George"
 
 [params]
 avatarURL = "/images/avatar.jpg"
+defaultTheme = "light"
 avatarSize = "size-l"
 math = true
 customHeadHTML = '''
