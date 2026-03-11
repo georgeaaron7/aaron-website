@@ -52,7 +52,7 @@ footer = ""
     name = "Posts"
 
     # Relative URL slug (appended to baseURL)
-    url = "/tags/posts"
+    url = "/tags/posts/"
 
     # Lower weights are listed first in the menu (leftmost); higher weights are
     # listed last in the menu (rightmost)
